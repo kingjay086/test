@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import linear_kernel
 # Load dataset
 @st.cache_data
 def load_data():
-    df = pd.read_csv("C:\\Users\jay30\OneDrive\Documents\myprojects\python\imdb_top_1000.csv")  # Change this filename if using another dataset
+    df = pd.read_csv("imdb_top_1000.csv")  # Change this filename if using another dataset
     df = df[['Series_Title', 'Genre', 'Overview']]  # minimal required columns
     df.dropna(inplace=True)
     df['combined_features'] = df['Genre'] + " " + df['Overview']
